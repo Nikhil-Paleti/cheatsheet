@@ -154,6 +154,39 @@ Start on the first line, press `V`, then move with `j` or `k`. The starting line
 
 After `y` or `d`, you return to Normal mode. When replacing several selected lines, `c` replaces the selection as one region; it does not create one cursor per line.
 
+### Indentation: why `>` needs a target
+
+In Normal mode, `>` is an operator: it waits for a motion or another `>`. It is the greater-than character (usually `Shift+.` on a US keyboard).
+
+| Goal | Keys from Normal mode |
+| --- | --- |
+| Indent current line | `>>` |
+| Indent current line and next | `>j` or `2>>` |
+| Unindent current line | `<<` |
+| Unindent current line and next | `<j` or `2<<` |
+| Indent line 8 | `:8>` then `Enter` |
+| Indent lines 8 through 9 | `:8,9>` then `Enter` |
+| Unindent lines 8 through 9 | `:8,9<` then `Enter` |
+| Select lines 8 and 9, then indent | `8G`, `V`, `j`, `>` |
+
+Use the current line numbers if edits have shifted them. The comma specifies an inclusive range. In Visual mode, the selection already supplies the target, so one `>` is enough. Each action shifts by one configured indentation level.
+
+### Wrap selected text in `{}` or `[]`
+
+**Built-in method for whole lines:** select with `V` and `j` / `k`, then:
+
+1. Press `Esc` to leave Visual mode.
+2. Press backtick then `>` to jump to the selection's end.
+3. Press `o`, type `}`, then press `Esc`.
+4. Press backtick then `<` to jump to the selection's start.
+5. Press `O`, type `{`, then press `Esc`.
+
+Lowercase `o` opens a line below; uppercase `O` opens one above. The backtick is usually beside `1` on a US keyboard. Substitute `]` and `[` for square brackets. This adds delimiters on their own lines; indent the contents separately if needed.
+
+**Shorter method — requires nvim-surround:** with its default mappings enabled, select text, then press `S]` for `[]` or `S}` for `{}`. Here `S` means `Shift+s`, followed by the closing delimiter. Characterwise selection (`v`) wraps inline; whole-line selection (`V`) puts the pair on separate lines. These are plugin shortcuts, not default Neovim commands; they require the plugin to be installed and active in the Neovim instance used by VS Code.
+
+See the [nvim-surround usage documentation](https://github.com/kylechui/nvim-surround/blob/main/doc/nvim-surround.txt) for the plugin mappings.
+
 ### Rectangular edits
 
 For aligned columns, press `Ctrl+v`, extend the rectangle with motions, then use `y` or `d`. To insert the same prefix on each selected row, press `I`, type it, and press `Esc`; Neovim applies it to the block's rows. Begin with a simple aligned block in a scratch file. VS Code's native multiple-cursor editing is another option; it has different selection behavior.
