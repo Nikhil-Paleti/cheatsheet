@@ -1,6 +1,6 @@
 # tmux — Cheatsheet
 
-`Prefix` is `Ctrl+B` by default: press it, release, then press the next key. Shell commands need Enter.
+Uses my dotfiles `~/.tmux.conf`: `Prefix` is `Ctrl+A` (tmux default: `Ctrl+B`). Press it, release, then press the next key. Shell commands need Enter.
 
 ## Sessions
 
@@ -21,7 +21,7 @@
 | Create a window | `Prefix, c` |
 | Next / previous window | `Prefix, n` / `Prefix, p` |
 | Choose a window | `Prefix, w` |
-| Go to window 0–9 | `Prefix, 0`–`9` |
+| Go to window 1–9 (numbering starts at 1) | `Prefix, 1`–`9` |
 | Rename current window | `Prefix, ,`, type name, Enter |
 | Close window and its panes (confirm) | `Prefix, &` |
 
@@ -31,10 +31,12 @@
 | --- | --- |
 | Split left / right | `Prefix, %` |
 | Split top / bottom | `Prefix, "` |
-| Move to another pane | `Prefix, Arrow key` |
+| Move left / down / up / right | `Prefix, h` / `j` / `k` / `l` (or Arrow keys) |
+| Resize left / down / up / right by 5 cells | `Prefix, H` / `J` / `K` / `L` (Shift; repeat quickly without Prefix) |
+| Show pane numbers (start at 1) | `Prefix, q` |
 | Cycle through panes | `Prefix, o` |
 | Zoom / restore current pane | `Prefix, z` |
 | Cycle pane layouts | `Prefix, Space` |
 | Close current pane (confirm) | `Prefix, x` |
 
-All keybindings: `Prefix, ?`.
+Reload `~/.tmux.conf`: `Prefix, r`. Mouse support is enabled. All keybindings: `Prefix, ?`.
