@@ -48,6 +48,8 @@ Start in Normal mode (`Esc`). Keys are sequential unless joined by `+`; uppercas
 | Select three lines / whole file | `V2j` / `ggVG` |
 | Copy / cut / replace selection | `y` / `d` / `c` |
 | Reselect last selection | `gv` |
+| Comment / uncomment current line (Normal mode) | `gcc` |
+| Comment / uncomment selected lines (Visual Line mode) | `V`, extend with `j` / `k`, then `gc`; reselect and `gc` to uncomment |
 | Indent / unindent current line | `>>` / `<<` |
 | Indent / unindent current and next line | `>j` / `<j` |
 | Indent / unindent selection | `>` / `<` (LazyVim keeps it selected) |
