@@ -8,6 +8,7 @@ Uses my dotfiles `~/.tmux.conf`: `Prefix` is `Ctrl+A` (tmux default: `Ctrl+B`). 
 | --- | --- |
 | Create and enter `work` | Shell: `tmux new -s work` |
 | List sessions on this machine | Shell: `tmux ls` |
+| Kill a named session and stop its programs | Shell: `tmux kill-session -t <session-name>` (e.g. `tmux kill-session -t work`) |
 | Attach to `work` | Shell: `tmux attach -t work` |
 | Attach here, detach other clients | Shell: `tmux attach -d -t work` |
 | Detach; keep programs running | `Prefix, d` |
