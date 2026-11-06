@@ -4,5 +4,6 @@ Short, practical references for tools I use. Pick a topic:
 
 - [LazyVim / Neovim](neovim.md) — modes, movement, selection, and editing.
 - [tmux](tmux.md) — sessions, windows, panes, and reconnecting over SSH.
+- [jj / Jujutsu](jj.md) — changes, bookmarks, and Git workflows.
 
 Each guide includes small examples and assumes default keybindings unless noted.
