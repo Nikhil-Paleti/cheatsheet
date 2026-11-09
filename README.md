@@ -12,7 +12,7 @@ Short, practical references for tools I use. Pick a topic:
 
 ## GPU profiling
 
-- [Nsight Systems (nsys)](nsys.md) — timelines, kernel launches, and memory copies.
-- [Nsight Compute (ncu)](ncu.md) — kernel metrics, filtering, and reports.
+- [Nsight Systems (nsys)](profiling/nsys.md) — timelines, kernel launches, and memory copies.
+- [Nsight Compute (ncu)](profiling/ncu.md) — kernel metrics, filtering, and reports.
 
 Each guide includes small examples and assumes default keybindings unless noted.
