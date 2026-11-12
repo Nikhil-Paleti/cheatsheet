@@ -3,6 +3,7 @@
 Short, practical references for tools I use. Pick a topic:
 
 - [LazyVim / Neovim](neovim.md) — modes, movement, selection, and editing.
+- [Bash](bash.md) — command-line movement, editing, and history.
 - [tmux](tmux.md) — sessions, windows, panes, and reconnecting over SSH.
 
 ## Version control
