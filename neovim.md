@@ -75,14 +75,26 @@ Use `v` to select, `c` to change, `d` to delete, or `y` to copy, followed by a t
 
 Wrap whole lines in braces without a plugin: select with `V`, then `Esc` → backtick then `>` → `o`, type `}`, `Esc` → backtick then `<` → `O`, type `{`, `Esc`. Use `]` / `[` for brackets.
 
+## Find files (Snacks picker)
+
+Start in Normal mode. Type part of a filename or path to fuzzy-find it; search project text when you remember code but not its filename.
+
+| Goal | Keys |
+| --- | --- |
+| Find files (project root) | `Space, Space` or `Leader, f, f` |
+| Search text inside project files | `Leader, /` or `Leader, s, g` |
+| Switch open buffers | `Leader` then `,` (comma) |
+| Recent files | `Leader, f, r` |
+| File explorer (project root) | `Leader, e` |
+
+Inside the picker: `Ctrl+n` / `Ctrl+p` selects next / previous result; `Enter` opens it. `Alt+h` toggles hidden files; `Alt+i` toggles ignored files.
+
 ## LazyVim files and code
 
 These are LazyVim defaults in my current config, not stock Neovim mappings. No personal keymap overrides are configured.
 
 | Goal | Keys |
 | --- | --- |
-| Find files / search project text | `Leader, f, f` / `Leader, s, g` |
-| File explorer (project root) | `Leader, e` |
 | Previous / next buffer | `Shift+h` / `Shift+l` |
 | Close buffer | `Leader, b, d` |
 | Split below / right | `Leader, -` / `Leader, \|` |
